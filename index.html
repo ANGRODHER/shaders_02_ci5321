@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Shaders 02 — CI5321</title>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; }
+      body { margin: 0; background: #0a0a12; }
+
+      nav {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.55);
+        padding: 6px 10px;
+        border-radius: 8px;
+        display: flex;
+        gap: 4px;
+      }
+
+      nav button {
+        cursor: pointer;
+        padding: 5px 14px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        background: transparent;
+        color: #666;
+        font-size: 13px;
+        font-weight: 600;
+        font-family: sans-serif;
+        transition: color 0.15s, border-color 0.15s;
+      }
+
+      nav button:hover  { color: #aaa; }
+      nav button.active { color: #fff; border-color: #555; }
+
+      .lil-gui {
+        position: fixed !important;
+        top: 60px !important;
+        left: 10px !important;
+        right: auto !important;
+      }
+
+      #canvas-container { width: 100vw; height: 100vh; display: block; }
+      canvas { display: block; }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <button id="btn-fountain" onclick="loadScene('fountain')">Fountain</button>
+      <button id="btn-galaxy"   onclick="loadScene('galaxy')">Galaxy</button>
+    </nav>
+    <div id="canvas-container"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
